@@ -12,21 +12,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-        <android.support.v7.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#243749"
-            android:minHeight="?attr/actionBarSize"
-            android:id="@+id/toolbar"
-            android:weightSum="1">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/topbannerbar">
-            </ImageView>
-        </android.support.v7.widget.Toolbar>
-
         <TextView
             android:text="How did you get your powers?"
             android:layout_width="match_parent"

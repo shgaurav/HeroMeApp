@@ -7,9 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.gaurav.herome.Fragments.MainFragment;
+import com.example.gaurav.herome.Fragments.PickPowerFragment;
 import com.example.gaurav.herome.R;
 
-public class MainActivity extends AppCompatActivity implements MainFragment.MainFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements MainFragment.MainFragmentInteractionListener, PickPowerFragment.PickPowerInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +26,20 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
         }
     }
 
+    public void loadPickPowerScreen(){
+
+        PickPowerFragment pickPowerFragment = new PickPowerFragment();
+        this.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, pickPowerFragment).addToBackStack(null).commit();
+        //this.getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, pickPowerFragment).addToBackStack(null).commit();
+    }
+
     @Override
     public void onMainFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onPickPowerInteraction(Uri uri) {
 
     }
 }
