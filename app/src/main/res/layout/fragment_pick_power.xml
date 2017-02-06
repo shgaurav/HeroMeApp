@@ -2,12 +2,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.gaurav.herome.Fragments.PickPowerFragment">
+    tools:context="com.example.gaurav.herome.Fragments.PickPowerFragment"
+    android:background="@drawable/hero_bg_gradient">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick a Power"
+            android:paddingTop="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/herome_yellow"
+            android:textStyle="normal|bold"
+            android:textAllCaps="true"
+            android:textAlignment="center" />
+
+        <Button
+            android:text="Turtle Power"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:id="@+id/turtleBtn"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/hero_button"
+            android:textColor="#ffee58"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/turtlepower_icon"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textAlignment="center"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="Lightning"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:id="@+id/lightningBtn"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/hero_button"
+            android:textColor="#ffee58"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/lightning_icon"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textAlignment="center"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="Flight"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:id="@+id/flightBtn"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/hero_button"
+            android:textColor="#ffee58"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/rocket_icon"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textAlignment="center"
+            android:textStyle="normal|bold" />
+        <Button
+            android:text="Web Slinging"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:id="@+id/webSlingBtn"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/hero_button"
+            android:textColor="#ffee58"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/spiderweb_icon"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textAlignment="center"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="Show Backstory"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:id="@+id/showBstoryBtn"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/hero_solid_btn"
+            android:textColor="@android:color/background_dark"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:backgroundTint="#ffee58"
+            android:textStyle="normal|bold" />
+
+
+
+
+
+    </LinearLayout>
 
 </FrameLayout>

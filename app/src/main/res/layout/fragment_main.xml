@@ -20,7 +20,8 @@
             android:layout_marginTop="10dp"
             android:gravity="center_vertical|center_horizontal"
             android:textColor="@color/herome_yellow"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="normal|bold" />
 
         <ImageView
             android:layout_width="match_parent"
@@ -39,7 +40,9 @@
             android:layout_marginTop="15dp"
             android:drawableLeft="@drawable/lightning_icon"
             android:paddingLeft="10dp"
-            android:paddingRight="10dp" />
+            android:paddingRight="10dp"
+            android:textAlignment="center"
+            android:textStyle="normal|bold" />
 
         <Button
             android:text="Genetic mutation"
@@ -52,7 +55,8 @@
             android:layout_marginTop="15dp"
             android:drawableLeft="@drawable/atomic_icon"
             android:paddingLeft="10dp"
-            android:paddingRight="10dp" />
+            android:paddingRight="10dp"
+            android:textStyle="normal|bold" />
 
         <Button
             android:text="Born with them"
@@ -65,7 +69,8 @@
             android:layout_marginTop="15dp"
             android:drawableLeft="@drawable/rocket_icon"
             android:paddingLeft="10dp"
-            android:paddingRight="10dp" />
+            android:paddingRight="10dp"
+            android:textStyle="normal|bold" />
 
         <Button
             android:text="Choose Powers"
@@ -78,7 +83,8 @@
             android:layout_marginTop="15dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:backgroundTint="#ffee58" />
+            android:backgroundTint="#ffee58"
+            android:textStyle="normal|bold" />
 
     </LinearLayout>
 
