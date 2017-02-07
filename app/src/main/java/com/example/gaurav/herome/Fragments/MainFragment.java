@@ -1,13 +1,20 @@
 package com.example.gaurav.herome.Fragments;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Telephony;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
 
 import com.example.gaurav.herome.Activities.MainActivity;
 import com.example.gaurav.herome.R;
@@ -20,7 +27,7 @@ import com.example.gaurav.herome.R;
  * Use the {@link MainFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MainFragment extends Fragment implements View.OnClickListener {
+public class MainFragment extends Fragment implements View.OnClickListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -34,6 +41,8 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     private Button geneticBtn;
     private Button bornBtn;
     private Button chooseBtn;
+
+    DrawLine drawLine;
 
     private MainFragmentInteractionListener mListener;
 
@@ -67,11 +76,26 @@ public class MainFragment extends Fragment implements View.OnClickListener {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+    //class for drawing a line.
+    class DrawLine extends View {
+        Paint paint = new Paint();
+        public DrawLine(Context context) {
+            super(context);
+            paint.setColor(Color.WHITE);
+        }
+        @Override
+        public void onDraw(Canvas canvas) {
+            canvas.drawLine(50, 100, 600, 600, paint);
+            canvas.drawLine(50, 550, 770, 0, paint);
+        }
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
+
         accidentBtn = (Button)view.findViewById(R.id.accidentBtn);
         geneticBtn = (Button)view.findViewById(R.id.geneticBtn);
         bornBtn = (Button)view.findViewById(R.id.bornBtn);
@@ -93,6 +117,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         return view;
     }
+
 
     @Override
     public void onClick(View v) {

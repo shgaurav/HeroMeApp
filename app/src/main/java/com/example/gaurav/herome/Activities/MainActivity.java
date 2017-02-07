@@ -11,6 +11,7 @@ import com.example.gaurav.herome.Fragments.MainFragment;
 import com.example.gaurav.herome.Fragments.PickPowerFragment;
 import com.example.gaurav.herome.R;
 
+
 public class MainActivity extends AppCompatActivity implements MainFragment.MainFragmentInteractionListener, PickPowerFragment.PickPowerInteractionListener, CharacterBioFragment.CharacterBioInteractionListener {
 
    public int POWERTYPE = 0;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_main);
         FragmentManager manager = getSupportFragmentManager();
         Fragment fragment = manager.findFragmentById(R.id.fragment_container);

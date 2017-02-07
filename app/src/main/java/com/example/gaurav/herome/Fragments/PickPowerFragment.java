@@ -34,6 +34,8 @@ public class PickPowerFragment extends Fragment implements View.OnClickListener 
     private Button lightningBtn;
     private Button flightBtn;
     private Button webSlingingBtn;
+    private Button laserVision;
+    private Button superStrength;
     private Button showBacktoryBtn;
 
 
@@ -79,12 +81,16 @@ public class PickPowerFragment extends Fragment implements View.OnClickListener 
         lightningBtn = (Button)view.findViewById(R.id.lightningBtn);
         flightBtn = (Button)view.findViewById(R.id.flightBtn);
         webSlingingBtn = (Button)view.findViewById(R.id.webSlingBtn);
+        laserVision = (Button)view.findViewById(R.id.laserVisionBtn);
+        superStrength = (Button)view.findViewById(R.id.superStrengthBtn);
         showBacktoryBtn = (Button)view.findViewById(R.id.showBstoryBtn);
 
         turtleBtn.setOnClickListener(this);
         lightningBtn.setOnClickListener(this);
         flightBtn.setOnClickListener(this);
         webSlingingBtn.setOnClickListener(this);
+        laserVision.setOnClickListener(this);
+        superStrength.setOnClickListener(this);
         showBacktoryBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -108,6 +114,8 @@ public class PickPowerFragment extends Fragment implements View.OnClickListener 
         lightningBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.lightning_icon,0,0,0);
         flightBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.rocket_icon,0,0,0);
         webSlingingBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.spiderweb_icon,0,0,0);
+        laserVision.setCompoundDrawablesWithIntrinsicBounds(R.drawable.laservision_icon,0,0,0);
+        superStrength.setCompoundDrawablesWithIntrinsicBounds(R.drawable.superstrength_icon,0,0,0);
 
         Button btn = (Button)v;
         int leftDrawable = 0;
@@ -132,6 +140,16 @@ public class PickPowerFragment extends Fragment implements View.OnClickListener 
         {
             leftDrawable = R.drawable.spiderweb_icon;
             mainActivity.POWERTYPE = 4;
+        }
+        else if(btn == laserVision)
+        {
+            leftDrawable = R.drawable.laservision_icon;
+            mainActivity.POWERTYPE = 5;
+        }
+        else if(btn == superStrength)
+        {
+            leftDrawable = R.drawable.superstrength_icon;
+            mainActivity.POWERTYPE = 6;
         }
 
         btn.setCompoundDrawablesWithIntrinsicBounds(leftDrawable,0,R.drawable.item_selected_btn,0);

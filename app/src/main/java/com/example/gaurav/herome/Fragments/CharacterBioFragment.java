@@ -101,6 +101,14 @@ public class CharacterBioFragment extends Fragment implements View.OnClickListen
         {
             secondaryPower.setText("Web Slinging");
         }
+        else if(mainActivity.POWERTYPE == 5)
+        {
+            secondaryPower.setText("Laser Vision");
+        }
+        else if(mainActivity.POWERTYPE == 6)
+        {
+            secondaryPower.setText("Super Strength");
+        }
         // Inflate the layout for this fragment
         return view;
     }
