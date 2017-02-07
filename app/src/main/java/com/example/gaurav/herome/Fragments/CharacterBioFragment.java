@@ -15,12 +15,12 @@ import com.example.gaurav.herome.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link PickPowerFragment.OnFragmentInteractionListener} interface
+ * {@link CharacterBioFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link PickPowerFragment#newInstance} factory method to
+ * Use the {@link CharacterBioFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PickPowerFragment extends Fragment implements View.OnClickListener {
+public class CharacterBioFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,16 +30,14 @@ public class PickPowerFragment extends Fragment implements View.OnClickListener 
     private String mParam1;
     private String mParam2;
 
-    private Button turtleBtn;
-    private Button lightningBtn;
-    private Button flightBtn;
-    private Button webSlingingBtn;
-    private Button showBacktoryBtn;
+    private Button startOver;
+    private Button primaryPower;
+    private Button secondaryPower;
 
 
-    private PickPowerInteractionListener mListener;
+    private CharacterBioInteractionListener mListener;
 
-    public PickPowerFragment() {
+    public CharacterBioFragment() {
         // Required empty public constructor
     }
 
@@ -49,11 +47,11 @@ public class PickPowerFragment extends Fragment implements View.OnClickListener 
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment PickPowerFragment.
+     * @return A new instance of fragment CharacterBioFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static PickPowerFragment newInstance(String param1, String param2) {
-        PickPowerFragment fragment = new PickPowerFragment();
+    public static CharacterBioFragment newInstance(String param1, String param2) {
+        CharacterBioFragment fragment = new CharacterBioFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -73,85 +71,60 @@ public class PickPowerFragment extends Fragment implements View.OnClickListener 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.fragment_pick_power, container, false);
-        turtleBtn = (Button)view.findViewById(R.id.turtleBtn);
-        lightningBtn = (Button)view.findViewById(R.id.lightningBtn);
-        flightBtn = (Button)view.findViewById(R.id.flightBtn);
-        webSlingingBtn = (Button)view.findViewById(R.id.webSlingBtn);
-        showBacktoryBtn = (Button)view.findViewById(R.id.showBstoryBtn);
-
-        turtleBtn.setOnClickListener(this);
-        lightningBtn.setOnClickListener(this);
-        flightBtn.setOnClickListener(this);
-        webSlingingBtn.setOnClickListener(this);
-        showBacktoryBtn.setOnClickListener(new View.OnClickListener(){
+        View view = inflater.inflate(R.layout.fragment_character_bio, container, false);
+        startOver = (Button)view.findViewById(R.id.startOverBtn);
+        primaryPower = (Button)view.findViewById(R.id.primaryPowerBtn);
+        secondaryPower = (Button)view.findViewById(R.id.secondaryPowerBtn);
+        startOver.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 MainActivity mainActivity = (MainActivity)getActivity();
-                mainActivity.loadCharacterBioScreen();
+                mainActivity.loadMainScreen();
             }
+
         });
 
-        showBacktoryBtn.setEnabled(false);
-        showBacktoryBtn.getBackground().setAlpha(128);
+        MainActivity mainActivity = (MainActivity) getActivity();
+        if(mainActivity.POWERTYPE == 1)
+        {
+            secondaryPower.setText("Turtle Power");
+        }
+        else if(mainActivity.POWERTYPE == 2)
+        {
+            secondaryPower.setText("Lightning");
+        }
+        else if(mainActivity.POWERTYPE == 3)
+        {
+            secondaryPower.setText("Flight");
+        }
+        else if(mainActivity.POWERTYPE == 4)
+        {
+            secondaryPower.setText("Web Slinging");
+        }
         // Inflate the layout for this fragment
         return view;
     }
 
     @Override
     public void onClick(View v) {
-        showBacktoryBtn.setEnabled(true);
-        showBacktoryBtn.getBackground().setAlpha(255);
 
-        turtleBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.turtlepower_icon,0,0,0);
-        lightningBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.lightning_icon,0,0,0);
-        flightBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.rocket_icon,0,0,0);
-        webSlingingBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.spiderweb_icon,0,0,0);
-
-        Button btn = (Button)v;
-        int leftDrawable = 0;
-
-        MainActivity mainActivity = (MainActivity) getActivity();
-        if(btn == turtleBtn)
-        {
-            leftDrawable = R.drawable.turtlepower_icon;
-            mainActivity.POWERTYPE = 1;
-        }
-        else if(btn == lightningBtn)
-        {
-            leftDrawable = R.drawable.lightning_icon;
-            mainActivity.POWERTYPE = 2;
-        }
-        else if(btn == flightBtn)
-        {
-            leftDrawable = R.drawable.rocket_icon;
-            mainActivity.POWERTYPE = 3;
-        }
-        else if(btn == webSlingingBtn)
-        {
-            leftDrawable = R.drawable.spiderweb_icon;
-            mainActivity.POWERTYPE = 4;
-        }
-
-        btn.setCompoundDrawablesWithIntrinsicBounds(leftDrawable,0,R.drawable.item_selected_btn,0);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
-            mListener.onPickPowerInteraction(uri);
+            mListener.onCharacterBioInteraction(uri);
         }
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof PickPowerInteractionListener) {
-            mListener = (PickPowerInteractionListener) context;
+        if (context instanceof CharacterBioInteractionListener) {
+            mListener = (CharacterBioInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
-                    + " must implement onPickPowerInteractionListener");
+                    + " must implement OnFragmentInteractionListener");
         }
     }
 
@@ -171,8 +144,8 @@ public class PickPowerFragment extends Fragment implements View.OnClickListener 
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
-    public interface PickPowerInteractionListener {
+    public interface CharacterBioInteractionListener {
         // TODO: Update argument type and name
-        void onPickPowerInteraction(Uri uri);
+        void onCharacterBioInteraction(Uri uri);
     }
 }

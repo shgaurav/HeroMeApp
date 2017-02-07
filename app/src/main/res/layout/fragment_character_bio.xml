@@ -1,0 +1,116 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gaurav.herome.Fragments.CharacterBioFragment"
+    android:background="@drawable/hero_bg_gradient">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Superman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textAllCaps="true"
+            android:textColor="@color/herome_yellow"
+            android:textSize="20sp"
+            android:paddingTop="5dp"
+            android:gravity="center_horizontal|center"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="Backstory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:textStyle="normal|bold"
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:text="Superman is born Kal-el on the alien planet Krypton. His parents Jor-El and Lara became aware of Kryptons impending destruction and Jor-El begins constructing a spacecraft that would carry Kal-En to Earth. During Krypton's last moments, Jor-El places young Kar-El in the spacecraft and launches it. Jor-El and Lara die as the spacecraft barely escapes Krypton's fate. The spacecraft lands in the rural."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textColor="@android:color/background_light"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:text="Primary Power"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="Web Slinging"
+            android:layout_height="60dp"
+            android:id="@+id/primaryPowerBtn"
+            android:background="@drawable/hero_button"
+            android:textColor="#ffee58"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/spiderweb_icon"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal|center"
+            android:layout_marginLeft="10dp"
+            android:layout_width="355dp" />
+
+        <TextView
+            android:text="Secondary Power"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="Web Slinging"
+            android:layout_height="60dp"
+            android:id="@+id/secondaryPowerBtn"
+            android:background="@drawable/hero_button"
+            android:textColor="#ffee58"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/spiderweb_icon"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_width="355dp" />
+
+        <Button
+            android:text="Start Over"
+            android:layout_height="60dp"
+            android:id="@+id/startOverBtn"
+            android:background="@drawable/hero_solid_btn"
+            android:textColor="@android:color/background_dark"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:backgroundTint="#ffee58"
+            android:textStyle="normal|bold"
+            android:layout_marginLeft="10dp"
+            android:layout_width="355dp" />
+    </LinearLayout>
+
+</FrameLayout>
