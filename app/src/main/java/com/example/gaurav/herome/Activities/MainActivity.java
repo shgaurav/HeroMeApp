@@ -14,7 +14,11 @@ import com.example.gaurav.herome.R;
 
 public class MainActivity extends AppCompatActivity implements MainFragment.MainFragmentInteractionListener, PickPowerFragment.PickPowerInteractionListener, CharacterBioFragment.CharacterBioInteractionListener {
 
-   public int POWERTYPE = 0;
+    public int POWERCHOSEN = 0;
+    public int HowPowerGot = 0;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

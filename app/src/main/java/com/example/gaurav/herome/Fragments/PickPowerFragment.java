@@ -124,32 +124,32 @@ public class PickPowerFragment extends Fragment implements View.OnClickListener 
         if(btn == turtleBtn)
         {
             leftDrawable = R.drawable.turtlepower_icon;
-            mainActivity.POWERTYPE = 1;
+            mainActivity.POWERCHOSEN = 1;
         }
         else if(btn == lightningBtn)
         {
             leftDrawable = R.drawable.lightning_icon;
-            mainActivity.POWERTYPE = 2;
+            mainActivity.POWERCHOSEN = 2;
         }
         else if(btn == flightBtn)
         {
             leftDrawable = R.drawable.rocket_icon;
-            mainActivity.POWERTYPE = 3;
+            mainActivity.POWERCHOSEN = 3;
         }
         else if(btn == webSlingingBtn)
         {
             leftDrawable = R.drawable.spiderweb_icon;
-            mainActivity.POWERTYPE = 4;
+            mainActivity.POWERCHOSEN = 4;
         }
         else if(btn == laserVision)
         {
             leftDrawable = R.drawable.laservision_icon;
-            mainActivity.POWERTYPE = 5;
+            mainActivity.POWERCHOSEN = 5;
         }
         else if(btn == superStrength)
         {
             leftDrawable = R.drawable.superstrength_icon;
-            mainActivity.POWERTYPE = 6;
+            mainActivity.POWERCHOSEN = 6;
         }
 
         btn.setCompoundDrawablesWithIntrinsicBounds(leftDrawable,0,R.drawable.item_selected_btn,0);

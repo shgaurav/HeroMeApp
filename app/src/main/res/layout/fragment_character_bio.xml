@@ -14,17 +14,17 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:text="Superman"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2"
+            android:id="@+id/superHeroNameTV"
             android:textAllCaps="true"
             android:textColor="@color/herome_yellow"
             android:textSize="20sp"
             android:paddingTop="5dp"
             android:gravity="center_horizontal|center"
             android:textStyle="normal|bold"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="5dp"
+            android:text="Wrong Criteria!!!" />
 
         <TextView
             android:text="Backstory"
@@ -38,10 +38,9 @@
             android:layout_marginTop="10dp" />
 
         <TextView
-            android:text="Superman is born Kal-el on the alien planet Krypton. His parents Jor-El and Lara became aware of Kryptons impending destruction and Jor-El begins constructing a spacecraft that would carry Kal-En to Earth. During Krypton's last moments, Jor-El places young Kar-El in the spacecraft and launches it. Jor-El and Lara die as the spacecraft barely escapes Krypton's fate. The spacecraft lands in the rural."
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView3"
+            android:id="@+id/descTV"
             android:textColor="@android:color/background_light"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -60,7 +59,6 @@
             android:textStyle="normal|bold" />
 
         <Button
-            android:text="Web Slinging"
             android:layout_height="60dp"
             android:id="@+id/primaryPowerBtn"
             android:background="@drawable/hero_button"
@@ -86,7 +84,6 @@
             android:textStyle="normal|bold" />
 
         <Button
-            android:text="Web Slinging"
             android:layout_height="60dp"
             android:id="@+id/secondaryPowerBtn"
             android:background="@drawable/hero_button"

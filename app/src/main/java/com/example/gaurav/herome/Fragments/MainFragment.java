@@ -128,19 +128,25 @@ public class MainFragment extends Fragment implements View.OnClickListener{
         geneticBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.atomic_icon,0,0,0);
         bornBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.rocket_icon,0,0,0);
 
+        MainActivity mainActivity = (MainActivity) getActivity();
+
         Button btn = (Button)v;
         int leftDrawable = 0;
         if(btn == accidentBtn)
         {
             leftDrawable = R.drawable.lightning_icon;
+            mainActivity.HowPowerGot = 1;
+
         }
         else if(btn == geneticBtn)
         {
             leftDrawable = R.drawable.atomic_icon;
+            mainActivity.HowPowerGot = 2;
         }
         else if(btn == bornBtn)
         {
             leftDrawable = R.drawable.rocket_icon;
+            mainActivity.HowPowerGot = 3;
         }
 
         btn.setCompoundDrawablesWithIntrinsicBounds(leftDrawable,0,R.drawable.item_selected_btn,0);
