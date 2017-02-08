@@ -42,8 +42,6 @@ public class MainFragment extends Fragment implements View.OnClickListener{
     private Button bornBtn;
     private Button chooseBtn;
 
-    DrawLine drawLine;
-
     private MainFragmentInteractionListener mListener;
 
     public MainFragment() {
@@ -74,6 +72,7 @@ public class MainFragment extends Fragment implements View.OnClickListener{
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
     //class for drawing a line.
@@ -115,6 +114,7 @@ public class MainFragment extends Fragment implements View.OnClickListener{
         chooseBtn.setEnabled(false);
         chooseBtn.getBackground().setAlpha(128);
         // Inflate the layout for this fragment
+
         return view;
     }
 

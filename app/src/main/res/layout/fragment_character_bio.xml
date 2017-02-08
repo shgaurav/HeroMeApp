@@ -11,7 +11,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="visible">
 
         <TextView
             android:layout_width="match_parent"
@@ -24,18 +25,27 @@
             android:gravity="center_horizontal|center"
             android:textStyle="normal|bold"
             android:layout_marginTop="5dp"
-            android:text="Wrong Criteria!!!" />
+            android:text="Wrong"
+            android:visibility="visible" />
 
         <TextView
             android:text="Backstory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView4"
+            android:id="@+id/backStoryTv"
             android:textStyle="normal|bold"
             android:textColor="@android:color/background_light"
             android:textSize="16sp"
             android:gravity="center_horizontal"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:visibility="visible" />
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/sadface"
+            android:visibility="gone"
+            android:layout_gravity="center" />
 
         <TextView
             android:layout_width="match_parent"
@@ -45,18 +55,20 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="4dp"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:visibility="visible" />
 
         <TextView
             android:text="Primary Power"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView5"
-            android:layout_marginLeft="10dp"
+            android:id="@+id/primaryPTV"
+            android:layout_marginLeft="25dp"
             android:layout_marginTop="15dp"
             android:textColor="@android:color/background_light"
             android:textSize="16sp"
-            android:textStyle="normal|bold" />
+            android:textStyle="normal|bold"
+            android:visibility="visible" />
 
         <Button
             android:layout_height="60dp"
@@ -68,20 +80,21 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textAlignment="center"
-            android:gravity="center_horizontal|center"
-            android:layout_marginLeft="10dp"
-            android:layout_width="380dp" />
+            android:visibility="visible"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_width="385dp" />
 
         <TextView
             android:text="Secondary Power"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView5"
-            android:layout_marginLeft="10dp"
+            android:id="@+id/secondaryPTV"
+            android:layout_marginLeft="25dp"
             android:layout_marginTop="8dp"
             android:textColor="@android:color/background_light"
             android:textSize="16sp"
-            android:textStyle="normal|bold" />
+            android:textStyle="normal|bold"
+            android:visibility="visible" />
 
         <Button
             android:layout_height="60dp"
@@ -94,8 +107,10 @@
             android:paddingRight="10dp"
             android:textAlignment="center"
             android:gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_width="380dp" />
+            android:visibility="visible"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_width="385dp" />
+
 
         <Button
             android:text="Start Over"
@@ -108,8 +123,8 @@
             android:paddingRight="10dp"
             android:backgroundTint="#ffee58"
             android:textStyle="normal|bold"
-            android:layout_marginLeft="10dp"
-            android:layout_width="380dp" />
+            android:layout_gravity="center_horizontal|center"
+            android:layout_width="385dp" />
     </LinearLayout>
 
 </FrameLayout>

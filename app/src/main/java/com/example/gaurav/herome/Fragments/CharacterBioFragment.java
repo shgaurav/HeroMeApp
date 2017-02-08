@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.gaurav.herome.Activities.MainActivity;
@@ -36,6 +37,10 @@ public class CharacterBioFragment extends Fragment implements View.OnClickListen
     private Button secondaryPower;
     private TextView name;
     private TextView desc;
+    private TextView primaryPTV;
+    private TextView secondaryPTV;
+    private TextView backStoryTv;
+    private ImageView i1;
 
 
     private CharacterBioInteractionListener mListener;
@@ -80,6 +85,10 @@ public class CharacterBioFragment extends Fragment implements View.OnClickListen
         secondaryPower = (Button)view.findViewById(R.id.secondaryPowerBtn);
         name = (TextView) view.findViewById(R.id.superHeroNameTV);
         desc = (TextView) view.findViewById(R.id.descTV);
+        primaryPTV = (TextView) view.findViewById(R.id.primaryPTV);
+        secondaryPTV = (TextView) view.findViewById(R.id.secondaryPTV);
+        backStoryTv = (TextView) view.findViewById(R.id.backStoryTv);
+        i1 = (ImageView) view.findViewById(R.id.imageView1);
         startOver.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -96,14 +105,20 @@ public class CharacterBioFragment extends Fragment implements View.OnClickListen
             desc.setText("The Teenage Mutant Ninja Turtles (often shortened to TMNT or Ninja Turtles) are four fictional teenaged anthropomorphic turtles named after Renaissance Italian artists. They were trained by their anthropomorphic rat sensei in the art of ninjutsu.");
             primaryPower.setText("Turtle Power");
             secondaryPower.setText("Karate Chopping");
+            primaryPower.setCompoundDrawablesWithIntrinsicBounds(R.drawable.turtlepower_icon,0,0,0);
+            secondaryPower.setCompoundDrawablesWithIntrinsicBounds(R.drawable.karate,0,0,0);
+
 
         }
+
         else if(mainActivity.POWERCHOSEN == 2 && mainActivity.HowPowerGot == 1)
         {
             name.setText("The Flash");
             desc.setText("The first was Jay Garrick, from the Golden Age - later belonging to Earth-Two. He inhaled the vapours of hard water (later, heavy water) to gain his superspeed. The second was Barry Allen, a Silver Age forensic scientist who gained his powers when lightning struck at his lab and doused him with chemicals.");
             primaryPower.setText("Lightning");
             secondaryPower.setText("Time Travel");
+            primaryPower.setCompoundDrawablesWithIntrinsicBounds(R.drawable.lightning_icon,0,0,0);
+            secondaryPower.setCompoundDrawablesWithIntrinsicBounds(R.drawable.stopwatch,0,0,0);
         }
         else if(mainActivity.POWERCHOSEN == 3 && mainActivity.HowPowerGot == 3)
         {
@@ -111,6 +126,7 @@ public class CharacterBioFragment extends Fragment implements View.OnClickListen
             desc.setText("Superman, a Kryptonian, flies toward the Earth's yellow sun to recharge his powers. The Photonucleic Effect is the effect by which Kryptonians and creatures from the planet Krypton and, presumably, Daxam as well, are given incredible superpowers by exposure to Earth's Yellow sun.");
             primaryPower.setText("Flight");
             secondaryPower.setText("Super Strength");
+            primaryPower.setCompoundDrawablesWithIntrinsicBounds(R.drawable.rocket_icon,0,0,0);
         }
         else if(mainActivity.POWERCHOSEN == 4 && mainActivity.HowPowerGot == 1)
         {
@@ -118,6 +134,7 @@ public class CharacterBioFragment extends Fragment implements View.OnClickListen
             desc.setText("Spider-Man (Peter Parker) Small hairs on his hands and feet that allow him to adhere to walls and most surfaces. When high school bookworm Peter Parker was bitten by a Radioactive Spider during a science experiment, he soon found out that he had gained the proportionate powers of an arachnid.");
             primaryPower.setText("Web Slinging");
             secondaryPower.setText("Super Strength");
+            primaryPower.setCompoundDrawablesWithIntrinsicBounds(R.drawable.spiderweb_icon,0,0,0);
         }
         else if(mainActivity.POWERCHOSEN == 5 && mainActivity.HowPowerGot == 2)
         {
@@ -125,6 +142,8 @@ public class CharacterBioFragment extends Fragment implements View.OnClickListen
             desc.setText("The first X-Man, Scott Summers possesses the mutant ability to draw ambient energy from another dimension through his eyes which are actually portals to the dimension, he usually channels this energy into concussive force blasts. He is visually distinctive for the ruby quartz visor he wears to control his devastating power. A born leader, Cyclops succeeded his mentor Professor X to command the X-Men.");
             primaryPower.setText("Laser Vision");
             secondaryPower.setText("Strategist");
+            primaryPower.setCompoundDrawablesWithIntrinsicBounds(R.drawable.laservision_icon,0,0,0);
+            secondaryPower.setCompoundDrawablesWithIntrinsicBounds(R.drawable.strategy,0,0,0);
 
         }
         else if(mainActivity.POWERCHOSEN == 6 && mainActivity.HowPowerGot == 1)
@@ -133,6 +152,20 @@ public class CharacterBioFragment extends Fragment implements View.OnClickListen
             desc.setText("The Incredible Hulk is a embodiment of Super Strength, Unstoppable Rage. Emotionally-repressed scientific genius Dr. Bruce Banner, while employed as a weapons designer for the US Army, is exposed to a massive dose of gamma radiation in the process of saving teenager Rick Jones from a bomb test, and as a result now changes into a gigantic green musclebound.");
             primaryPower.setText("Super Strength");
             secondaryPower.setText(" Unstoppable Rage");
+            primaryPower.setCompoundDrawablesWithIntrinsicBounds(R.drawable.superstrength_icon,0,0,0);
+            secondaryPower.setCompoundDrawablesWithIntrinsicBounds(R.drawable.rage,0,0,0);
+        }
+        else
+        {
+            desc.setVisibility(View.INVISIBLE);
+            primaryPower.setVisibility(View.INVISIBLE);
+            secondaryPower.setVisibility(View.INVISIBLE);
+            primaryPTV.setVisibility(View.INVISIBLE);
+            secondaryPTV.setVisibility(View.INVISIBLE);
+            backStoryTv.setVisibility(View.INVISIBLE);
+            i1.setVisibility(View.VISIBLE);
+            startOver.setVisibility(View.VISIBLE);
+            startOver.setText("Try Again");
         }
         // Inflate the layout for this fragment
         return view;
